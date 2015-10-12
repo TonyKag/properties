@@ -36,7 +36,7 @@ public class PropProject {
 	 */
 	public void changevalues() {
 		// TODO Auto-generated method stub
-		this.setName("Mr. Benas");
+		this.setName("Tony");
 
 	}
 
@@ -67,7 +67,7 @@ public class PropProject {
 	 */
 	public void demoSave() {
 		// TODO Auto-generated method stub
-		props.setProperty("name", "Mr Bananaus");
+		props.setProperty("name", "Tony");
 		try {
 			FileOutputStream fos = new FileOutputStream("saved-properties.prop");
 			props.store(fos, "My properties File: " + this.getName());
