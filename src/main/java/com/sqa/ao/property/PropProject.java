@@ -37,7 +37,10 @@ public class PropProject {
 	public void changevalues() {
 		// TODO Auto-generated method stub
 		this.setName("Tony");
-
+		this.setAge(47);
+		this.setJob("Engineer");
+		this.setAddress("1215 Market Street");
+		this.setCity("San Francisco");
 	}
 
 	public void demoLoad() {
@@ -67,7 +70,8 @@ public class PropProject {
 	 */
 	public void demoSave() {
 		// TODO Auto-generated method stub
-		props.setProperty("name", "Tony");
+		props.setProperty("name", "Antony");
+		props.setProperty("job", "QA Engineer");
 		try {
 			FileOutputStream fos = new FileOutputStream("saved-properties.prop");
 			props.store(fos, "My properties File: " + this.getName());
