@@ -121,6 +121,10 @@ public class PropProject {
 		name = name;
 	}
 
+	public static void setSelenium(String selenium) {
+		selenium = selenium;
+	}
+
 	private String address;
 
 	private int age;;
@@ -130,6 +134,8 @@ public class PropProject {
 	private String job;
 
 	private String name;
+
+	private String selenium;
 
 	/**
 	 * Method that changes values of current instance and the Properties object
@@ -231,6 +237,10 @@ public class PropProject {
 
 	public String getName() {
 		return this.name;
+	}
+
+	public String getSelenium() {
+		return this.selenium;
 	}
 
 	/**

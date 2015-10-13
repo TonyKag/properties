@@ -27,7 +27,7 @@ import org.junit.Test;
 public class PropertiesTest {
 
 	@Test
-	// Demo run working with the Properties Class and a porpertiesfile
+	// Demo run working with the Properties Class and a properties file
 	public void test() {
 		// Create the Properties object
 		PropProject myProject = new PropProject();
