@@ -47,7 +47,7 @@ public class PropertiesTest {
 
 		// load Properties file from location
 		String fileLoation;
-		fileLoation = "D://prop_properties.prop";
+		fileLoation = "D://Workspace/additional.prop";
 		myProject.loadProperties(fileLoation);
 
 		myProject.saveProperties(fileLoation, myProject.props);

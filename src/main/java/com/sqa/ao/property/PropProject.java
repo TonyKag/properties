@@ -97,13 +97,8 @@ public class PropProject {
 
 	}
 
-	/**
-	 * @param fileLoation
-	 * @param prop
-	 */
 	public static void saveProperties(String fileLoation, Properties props) {
 		// TODO Auto-generated method stub
-
 	}
 
 	public static void setAddress(String address) {
