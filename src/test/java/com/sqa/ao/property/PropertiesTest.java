@@ -49,9 +49,8 @@ public class PropertiesTest {
 		String fileLoation;
 		fileLoation = "D://prop_properties.prop";
 		myProject.loadProperties(fileLoation);
-		myProject.saveProperties(fileLoation, myProject.props);
 
-		// Also implement any one of each of the following 2 set of methods:
+		myProject.saveProperties(fileLoation, myProject.props);
 
 		myProject.convertPropertiesToMap(myProject.props);
 
