@@ -82,6 +82,8 @@ public class PropProject {
 			setAddress(props.getProperty("address"));
 			// Set the job of current instance to the Properties object's value
 			setJob(props.getProperty("job"));
+			// Set selenium info
+			setSelenium(props.getProperty("selenium"));
 		} catch (FileNotFoundException e) {
 			// Handle file not found exception scenario
 			e.printStackTrace();
@@ -143,10 +145,10 @@ public class PropProject {
 	public void changeValues() {
 		// Change the value of the current instance's name variable to "Mr.
 		// Bananas"
-		this.setName("Mr. Bananas");
+		this.setJob("automation engineer");
 		// Set the Property of the Properties object for key "name" to
-		// <current-name of instance>, "Mr. Bananas"
-		this.props.setProperty("name", this.getName());
+		// <current-name of instance>, "automation engineers"
+		this.props.setProperty("job", this.getJob());
 	}
 
 	/**
@@ -261,6 +263,8 @@ public class PropProject {
 		builder.append(this.job);
 		builder.append(", name=");
 		builder.append(this.name);
+		builder.append(", selenium=");
+		builder.append(this.selenium);
 		builder.append("]");
 		return builder.toString();
 	}
