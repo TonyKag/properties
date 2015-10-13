@@ -12,8 +12,6 @@ package com.sqa.ao.property;
 
 import org.junit.Test;
 
-import com.sqa.ao.property.PropProject;
-
 /**
  * PropertiesTest //ADDD (description of class)
  * <p>
@@ -46,33 +44,31 @@ public class PropertiesTest {
 		myProject.demoSave();
 		// *Make sure to refresh Package Explorer for your project to see saved
 		// properties.prop file
-		
-		
-		//I would like you to implement the following two methods:
 
-		public static Properties loadProperties( String  fileLocation);
-		public static void saveProperties(String fileLoation, Properties props);
+		// load Properties file from location
+		String fileLoation;
+		fileLoation = "D://prop_properties.prop";
+		myProject.loadProperties(fileLoation);
+		myProject.saveProperties(fileLoation, myProject.props);
 
-		//Also implement any one of each of the following 2 set of methods:
+		// Also implement any one of each of the following 2 set of methods:
 
-		public static Map<String,String> convertPropertiesToMap(Properties props);
-		public static Properties convertMapTpProperties(HashMap<String,String> map);
+		myProject.convertPropertiesToMap(myProject.props);
 
-		public static String[] retrievePropertyNames(Properties props);
-		public static String[] retievePropertyValues(Properties props);
+		String[] myNames = new String[5];
+		myNames = myProject.retrievePropertyNames(myProject.props);
 
-		//Also implement any one of each of the following 4 set of methods:
+		String myString = "This is my string. (2 * 15) = 120 / 4 . Let's find characters";
+		String last6Characters;
+		last6Characters = myProject.getLast6Characters(myString);
 
-		public static String getLast6Characters(String string);
-		public static String getFirst73Characters(String string);
+		String evenCharacters;
+		evenCharacters = myProject.getEvenCharacters(myString);
 
-		public static String getEvenCharacters(String string);
-		public static String geOddCharacters(String string);
+		String vowelessString;
+		vowelessString = myProject.getVowelessString(myString);
 
-		public static String getConstantlessString(String string);
-		public static String getVowelessString(String string);
-
-		public static String getNumberCharacters(String string);
-		public static String getLetterCharacters(String string);
+		String numberCharacters;
+		numberCharacters = myProject.getNumberCharacters(myString);
 	}
 }

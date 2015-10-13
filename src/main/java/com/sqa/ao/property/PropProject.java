@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -26,17 +27,114 @@ import java.util.Properties;
  */
 public class PropProject {
 
+	public static Properties props;
+
+	public static Map<String, String> convertPropertiesToMap(Properties props) {
+		return null;
+	};
+
+	public static String getEvenCharacters(String string) {
+
+		String result = " ";
+		return result;
+	};
+
+	public static String getLast6Characters(String string) {
+
+		String result = " ";
+		return result;
+	};
+
+	public static String getNumberCharacters(String string) {
+
+		String result = " ";
+		return result;
+	};
+
+	public static String getVowelessString(String string) {
+
+		String result = " ";
+		return result;
+	};
+
+	public static Properties loadProperties(String fileLocation) {
+		// Create a new instance of the Properties class
+		props = new Properties();
+		// Surround with try catch for error handling of file not being present
+		// and if an IO due to bad connection occur
+		try {
+			// Use a FileInputStream and set it to the location of the file
+			// "my-properties.prop"
+			// This may cause a FileNotFoundException
+			FileInputStream fis = new FileInputStream(fileLocation);
+			// Load the properties of the text file into the Properties object
+			// This may cause IOException due to connection errors
+			props.load(fis);
+			// Set the name of current instance to the Properties object's value
+			setName(props.getProperty("name"));
+			// Set the age of current instance to the Properties object's value,
+			// also Parse it to int
+			setAge(Integer.parseInt(props.getProperty("age")));
+			// Set the city of current instance to the Properties object's value
+			setCity(props.getProperty("city"));
+			// Set the address of current instance to the Properties object's
+			// value
+			setAddress(props.getProperty("address"));
+			// Set the job of current instance to the Properties object's value
+			setJob(props.getProperty("job"));
+		} catch (FileNotFoundException e) {
+			// Handle file not found exception scenario
+			e.printStackTrace();
+		} catch (IOException e) {
+			// Handle IO exception scenario
+			e.printStackTrace();
+		}
+		return props;
+	};
+
+	public static String[] retrievePropertyNames(Properties props) {
+		return null;
+
+	}
+
+	/**
+	 * @param fileLoation
+	 * @param prop
+	 */
+	public static void saveProperties(String fileLoation, Properties props) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static void setAddress(String address) {
+		address = address;
+	}
+
+	public static void setAge(int age) {
+		age = age;
+	}
+
+	public static void setCity(String city) {
+		city = city;
+	}
+
+	public static void setJob(String job) {
+		job = job;
+	}
+
+	public static void setName(String name) {
+		name = name;
+	}
+
 	private String address;
 
-	private int age;
+	private int age;;
 
 	private String city;
 
 	private String job;
 
 	private String name;
-
-	private Properties props;
 
 	/**
 	 * Method that changes values of current instance and the Properties object
@@ -140,26 +238,6 @@ public class PropProject {
 		return this.name;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public void setJob(String job) {
-		this.job = job;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	/**
 	 * Method that overrides the toString using the StringBuilder class
 	 * Generated using the Source > Generate to toString() option and selecting
@@ -181,4 +259,5 @@ public class PropProject {
 		builder.append("]");
 		return builder.toString();
 	}
+
 }
