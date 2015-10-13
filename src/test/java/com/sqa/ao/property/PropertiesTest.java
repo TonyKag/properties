@@ -46,5 +46,33 @@ public class PropertiesTest {
 		myProject.demoSave();
 		// *Make sure to refresh Package Explorer for your project to see saved
 		// properties.prop file
+		
+		
+		//I would like you to implement the following two methods:
+
+		public static Properties loadProperties( String  fileLocation);
+		public static void saveProperties(String fileLoation, Properties props);
+
+		//Also implement any one of each of the following 2 set of methods:
+
+		public static Map<String,String> convertPropertiesToMap(Properties props);
+		public static Properties convertMapTpProperties(HashMap<String,String> map);
+
+		public static String[] retrievePropertyNames(Properties props);
+		public static String[] retievePropertyValues(Properties props);
+
+		//Also implement any one of each of the following 4 set of methods:
+
+		public static String getLast6Characters(String string);
+		public static String getFirst73Characters(String string);
+
+		public static String getEvenCharacters(String string);
+		public static String geOddCharacters(String string);
+
+		public static String getConstantlessString(String string);
+		public static String getVowelessString(String string);
+
+		public static String getNumberCharacters(String string);
+		public static String getLetterCharacters(String string);
 	}
 }
