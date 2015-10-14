@@ -61,11 +61,11 @@ public class PropertiesTest {
 		String[] myNames = new String[1];
 		myNames = myProject.retrievePropertyNames(myProject.props);
 
-		// String myString = "This is my string. (2 * 15) = 120 / 4 . Let's find
-		// characters";
-		// String last6Characters;
-		// last6Characters = myProject.getLast6Characters(myString);
-		//
+		String myString = "This is my string. (2 * 15) = 120 / 4 . Let's find characters";
+		String last6Characters;
+		last6Characters = myProject.getLast6Characters(myString);
+		System.out.println(last6Characters);
+
 		// String evenCharacters;
 		// evenCharacters = myProject.getEvenCharacters(myString);
 		//

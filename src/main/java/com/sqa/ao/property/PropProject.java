@@ -59,7 +59,7 @@ public class PropProject {
 
 	public static String getLast6Characters(String string) {
 
-		String result = " ";
+		String result = string.substring(string.length() - 6);
 		return result;
 	};
 
