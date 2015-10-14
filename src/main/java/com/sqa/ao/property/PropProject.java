@@ -48,8 +48,13 @@ public class PropProject {
 	};
 
 	public static String getEvenCharacters(String string) {
+		String result = "";
+		char[] ch = string.toCharArray();
 
-		String result = " ";
+		for (int i = 0, j = 0; i < string.length(); i += 2, j++) {
+			ch[i] = string.charAt(j);
+		}
+		result = ch.toString();
 		return result;
 	};
 
@@ -58,7 +63,6 @@ public class PropProject {
 	};
 
 	public static String getLast6Characters(String string) {
-
 		String result = string.substring(string.length() - 6);
 		return result;
 	};

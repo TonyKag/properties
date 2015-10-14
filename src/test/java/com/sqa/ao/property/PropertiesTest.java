@@ -66,8 +66,9 @@ public class PropertiesTest {
 		last6Characters = myProject.getLast6Characters(myString);
 		System.out.println(last6Characters);
 
-		// String evenCharacters;
-		// evenCharacters = myProject.getEvenCharacters(myString);
+		String evenCharacters;
+		evenCharacters = myProject.getEvenCharacters(myString);
+		System.out.println(evenCharacters);
 		//
 		// String vowelessString;
 		// vowelessString = myProject.getVowelessString(myString);
