@@ -143,11 +143,14 @@ public class PropProject {
 	 * Method that changes values of current instance and the Properties object
 	 */
 	public void changeValues() {
-		// Change the value of the current instance's name variable to "Mr.
-		// Bananas"
-		this.setJob("automation engineer");
+		// Change the value of the current instance's job variable to
+		// "automation engineer"
+		// this.setJob("automation engineer");
+		this.job = "automation engineer";
 		// Set the Property of the Properties object for key "name" to
 		// <current-name of instance>, "automation engineers"
+
+		// System.out.println("this.getJob(): " + this.getJob());
 		this.props.setProperty("job", this.getJob());
 	}
 
@@ -180,6 +183,8 @@ public class PropProject {
 			this.setAddress(this.props.getProperty("address"));
 			// Set the job of current instance to the Properties object's value
 			this.setJob(this.props.getProperty("job"));
+			// Set selenium info
+			this.setSelenium(this.props.getProperty("selenium"));
 		} catch (FileNotFoundException e) {
 			// Handle file not found exception scenario
 			e.printStackTrace();

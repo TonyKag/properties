@@ -35,44 +35,45 @@ public class PropertiesTest {
 		myProject.demoLoad();
 		// Run the demoLoad method to display the class set variables (Not the
 		// Properties object values)
-
 		myProject.display();
+
 		// Change the value of the name variables than set the Properties object
 		// to reflect this change
-
 		myProject.changeValues();
+
 		// Demo the save operation to save a Properties object to a text file on
 		// hard drive saved-properties.prop
 
-		myProject.demoSave();
+		// myProject.demoSave();
 		// *Make sure to refresh Package Explorer for your project to see saved
 		// properties.prop file
 
-		// load Properties file from location
-		String fileLoation;
-		fileLoation = "D://Workspace/additional.prop";
-		myProject.loadProperties(fileLoation);
+		// // load Properties file from location
+		// String fileLoation;
+		// fileLoation = "D://Workspace/additional.prop";
+		// myProject.loadProperties(fileLoation);
 
-		myProject.changeValues();
-		myProject.saveProperties(fileLoation, myProject.props);
+		// myProject.changeValues();
+		// myProject.saveProperties(fileLoation, myProject.props);
 
-		myProject.convertPropertiesToMap(myProject.props);
-
-		String[] myNames = new String[5];
-		myNames = myProject.retrievePropertyNames(myProject.props);
-
-		String myString = "This is my string. (2 * 15) = 120 / 4 . Let's find characters";
-		String last6Characters;
-		last6Characters = myProject.getLast6Characters(myString);
-
-		String evenCharacters;
-		evenCharacters = myProject.getEvenCharacters(myString);
-
-		String vowelessString;
-		vowelessString = myProject.getVowelessString(myString);
-
-		String numberCharacters;
-		numberCharacters = myProject.getNumberCharacters(myString);
+		// myProject.convertPropertiesToMap(myProject.props);
+		//
+		// String[] myNames = new String[5];
+		// myNames = myProject.retrievePropertyNames(myProject.props);
+		//
+		// String myString = "This is my string. (2 * 15) = 120 / 4 . Let's find
+		// characters";
+		// String last6Characters;
+		// last6Characters = myProject.getLast6Characters(myString);
+		//
+		// String evenCharacters;
+		// evenCharacters = myProject.getEvenCharacters(myString);
+		//
+		// String vowelessString;
+		// vowelessString = myProject.getVowelessString(myString);
+		//
+		// String numberCharacters;
+		// numberCharacters = myProject.getNumberCharacters(myString);
 
 	}
 }
