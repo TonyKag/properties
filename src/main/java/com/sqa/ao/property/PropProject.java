@@ -27,7 +27,9 @@ import java.util.Properties;
  */
 public class PropProject {
 
-	public static Properties props;
+	public static String job;
+
+	public static Properties props;;
 
 	public static Map<String, String> convertPropertiesToMap(Properties props) {
 		return null;
@@ -37,6 +39,10 @@ public class PropProject {
 
 		String result = " ";
 		return result;
+	};
+
+	public static String getJob() {
+		return job;
 	};
 
 	public static String getLast6Characters(String string) {
@@ -56,13 +62,13 @@ public class PropProject {
 	 */
 	public static Properties getProps() {
 		return props;
-	};
+	}
 
 	public static String getVowelessString(String string) {
 
 		String result = " ";
 		return result;
-	};
+	}
 
 	public static Properties loadProperties(String fileLocation) {
 		// Create a new instance of the Properties class
@@ -107,11 +113,9 @@ public class PropProject {
 	}
 
 	public static void saveProperties(String fileLocation, Properties props) throws IOException {
-		// pr = new Properties();
-		FileInputStream fis = new FileInputStream(fileLocation);
-		props.load(fis);
-		props.setProperty("job", props.getProperty("job"));
-		// setJob(props.getProperty("job"));
+		props.setProperty("job", getJob());
+		FileOutputStream fos = new FileOutputStream(fileLocation);
+		props.store(fos, null);
 	}
 
 	public static void setAddress(String address) {
@@ -132,7 +136,7 @@ public class PropProject {
 
 	public static void setName(String name) {
 		name = name;
-	}
+	};
 
 	/**
 	 * @param props
@@ -144,7 +148,7 @@ public class PropProject {
 
 	public static void setSelenium(String selenium) {
 		selenium = selenium;
-	};
+	}
 
 	private String address;
 
@@ -153,8 +157,6 @@ public class PropProject {
 	private String city;
 
 	private String fileLocation = "D://Workspace/additional.prop";
-
-	private String job;
 
 	private String name;
 
@@ -166,14 +168,10 @@ public class PropProject {
 	public void changeValues() {
 		// Change the value of the current instance's job variable to
 		// "automation engineer"
-		// this.setJob("automation engineer");
-		this.job = "automation";
+		this.job = "automation engineer";
 		// Set the Property of the Properties object for key "name" to
 		// <current-name of instance>, "automation engineers"
-
-		// System.out.println("this.getJob(): " + this.getJob());
 		this.props.setProperty("job", this.getJob());
-		// System.out.println("this.getJob(): " + this.getJob());
 	}
 
 	/**
@@ -266,11 +264,7 @@ public class PropProject {
 	 * @return the fileLoation
 	 */
 	public String getFileLocation() {
-		return fileLocation;
-	}
-
-	public String getJob() {
-		return this.job;
+		return this.fileLocation;
 	}
 
 	public String getName() {
