@@ -58,9 +58,9 @@ public class PropertiesTest {
 
 		myProject.convertPropertiesToMap(myProject.props);
 
-		// String[] myNames = new String[5];
-		// myNames = myProject.retrievePropertyNames(myProject.props);
-		//
+		String[] myNames = new String[1];
+		myNames = myProject.retrievePropertyNames(myProject.props);
+
 		// String myString = "This is my string. (2 * 15) = 120 / 4 . Let's find
 		// characters";
 		// String last6Characters;
@@ -75,5 +75,14 @@ public class PropertiesTest {
 		// String numberCharacters;
 		// numberCharacters = myProject.getNumberCharacters(myString);
 
+	}
+
+	/**
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "PropertiesTest [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
 	}
 }

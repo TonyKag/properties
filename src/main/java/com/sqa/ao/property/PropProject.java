@@ -120,8 +120,11 @@ public class PropProject {
 	}
 
 	public static String[] retrievePropertyNames(Properties props) {
-		return null;
-
+		String[] n = new String[1];
+		n[0] = props.entrySet().toString();
+		// n[0] = props.propertyNames().toString();
+		System.out.println(n[0].toString());
+		return n;
 	}
 
 	public static void saveProperties(String fileLocation, Properties props) throws IOException {
@@ -296,27 +299,14 @@ public class PropProject {
 	}
 
 	/**
-	 * Method that overrides the toString using the StringBuilder class
-	 * Generated using the Source > Generate to toString() option and selecting
-	 * a different template
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("PropProject [address=");
-		builder.append(this.address);
-		builder.append(", age=");
-		builder.append(this.age);
-		builder.append(", city=");
-		builder.append(this.city);
-		builder.append(", job=");
-		builder.append(this.job);
-		builder.append(", name=");
-		builder.append(this.name);
-		builder.append(", selenium=");
-		builder.append(this.selenium);
-		builder.append("]");
-		return builder.toString();
+		return "PropProject [address=" + address + ", age=" + age + ", city=" + city + ", fileLocation=" + fileLocation
+				+ ", name=" + name + ", selenium=" + selenium + ", getAddress()=" + getAddress() + ", getAge()="
+				+ getAge() + ", getCity()=" + getCity() + ", getFileLocation()=" + getFileLocation() + ", getName()="
+				+ getName() + ", getSelenium()=" + getSelenium() + "]";
 	}
 
 }
