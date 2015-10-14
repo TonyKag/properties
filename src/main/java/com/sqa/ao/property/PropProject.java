@@ -122,7 +122,6 @@ public class PropProject {
 	public static String[] retrievePropertyNames(Properties props) {
 		String[] n = new String[1];
 		n[0] = props.entrySet().toString();
-		// n[0] = props.propertyNames().toString();
 		System.out.println(n[0].toString());
 		return n;
 	}
