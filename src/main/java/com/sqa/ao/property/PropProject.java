@@ -51,6 +51,13 @@ public class PropProject {
 		return result;
 	};
 
+	/**
+	 * @return the props
+	 */
+	public static Properties getProps() {
+		return props;
+	};
+
 	public static String getVowelessString(String string) {
 
 		String result = " ";
@@ -92,15 +99,19 @@ public class PropProject {
 			e.printStackTrace();
 		}
 		return props;
-	};
+	}
 
 	public static String[] retrievePropertyNames(Properties props) {
 		return null;
 
 	}
 
-	public static void saveProperties(String fileLoation, Properties props) {
-		// TODO Auto-generated method stub
+	public static void saveProperties(String fileLocation, Properties props) throws IOException {
+		// pr = new Properties();
+		FileInputStream fis = new FileInputStream(fileLocation);
+		props.load(fis);
+		props.setProperty("job", props.getProperty("job"));
+		// setJob(props.getProperty("job"));
 	}
 
 	public static void setAddress(String address) {
@@ -123,15 +134,25 @@ public class PropProject {
 		name = name;
 	}
 
+	/**
+	 * @param props
+	 *            the props to set
+	 */
+	public static void setProps(Properties props) {
+		PropProject.props = props;
+	}
+
 	public static void setSelenium(String selenium) {
 		selenium = selenium;
-	}
+	};
 
 	private String address;
 
-	private int age;;
+	private int age;
 
 	private String city;
+
+	private String fileLocation = "D://Workspace/additional.prop";
 
 	private String job;
 
@@ -146,12 +167,13 @@ public class PropProject {
 		// Change the value of the current instance's job variable to
 		// "automation engineer"
 		// this.setJob("automation engineer");
-		this.job = "automation engineer";
+		this.job = "automation";
 		// Set the Property of the Properties object for key "name" to
 		// <current-name of instance>, "automation engineers"
 
 		// System.out.println("this.getJob(): " + this.getJob());
 		this.props.setProperty("job", this.getJob());
+		// System.out.println("this.getJob(): " + this.getJob());
 	}
 
 	/**
@@ -203,6 +225,8 @@ public class PropProject {
 			// Create a FileOutputStream and set it to location where you want
 			// to save the converted Properties object to
 			// This may cause a FileNotFoundException
+			// FileOutputStream fos = new
+			// FileOutputStream("saved-properties.prop");
 			FileOutputStream fos = new FileOutputStream("saved-properties.prop");
 			// Save the properties object to the converted text file specified
 			// in FileOutputStream, second param is first line in file text,
@@ -238,6 +262,13 @@ public class PropProject {
 		return this.city;
 	}
 
+	/**
+	 * @return the fileLoation
+	 */
+	public String getFileLocation() {
+		return fileLocation;
+	}
+
 	public String getJob() {
 		return this.job;
 	}
@@ -248,6 +279,14 @@ public class PropProject {
 
 	public String getSelenium() {
 		return this.selenium;
+	}
+
+	/**
+	 * @param fileLoation
+	 *            the fileLoation to set
+	 */
+	public void setFileLoation(String fileLocation) {
+		this.fileLocation = fileLocation;
 	}
 
 	/**

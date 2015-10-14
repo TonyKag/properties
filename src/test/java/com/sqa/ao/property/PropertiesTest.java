@@ -10,6 +10,8 @@
 
 package com.sqa.ao.property;
 
+import java.io.IOException;
+
 import org.junit.Test;
 
 /**
@@ -28,7 +30,7 @@ public class PropertiesTest {
 
 	@Test
 	// Demo run working with the Properties Class and a properties file
-	public void test() {
+	public void test() throws IOException {
 		// Create the Properties object
 		PropProject myProject = new PropProject();
 		// Run the demoLoad method to see sample load case
@@ -43,21 +45,18 @@ public class PropertiesTest {
 
 		// Demo the save operation to save a Properties object to a text file on
 		// hard drive saved-properties.prop
+		myProject.demoSave();
 
-		// myProject.demoSave();
 		// *Make sure to refresh Package Explorer for your project to see saved
 		// properties.prop file
+		// load Properties file from location
 
-		// // load Properties file from location
-		// String fileLoation;
-		// fileLoation = "D://Workspace/additional.prop";
-		// myProject.loadProperties(fileLoation);
+		myProject.loadProperties(myProject.getFileLocation());
 
-		// myProject.changeValues();
-		// myProject.saveProperties(fileLoation, myProject.props);
+		myProject.changeValues();
+		myProject.saveProperties(myProject.getFileLocation(), myProject.props);
 
 		// myProject.convertPropertiesToMap(myProject.props);
-		//
 		// String[] myNames = new String[5];
 		// myNames = myProject.retrievePropertyNames(myProject.props);
 		//
