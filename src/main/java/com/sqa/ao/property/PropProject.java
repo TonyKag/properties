@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -32,6 +33,17 @@ public class PropProject {
 	public static Properties props;;
 
 	public static Map<String, String> convertPropertiesToMap(Properties props) {
+		Map mapProperties = new HashMap();
+		mapProperties.put("name", props.getProperty("name"));
+		mapProperties.put("address", props.getProperty("address"));
+		mapProperties.put("age", props.getProperty("age"));
+		mapProperties.put("city", props.getProperty("city"));
+		mapProperties.put("selenium", props.getProperty("selenium"));
+
+		System.out.println(
+				mapProperties.get("name") + "\n" + mapProperties.get("address") + "\n" + mapProperties.get("age") + "\n"
+						+ mapProperties.get("city") + "\n" + mapProperties.get("selenium") + "\n");
+
 		return null;
 	};
 

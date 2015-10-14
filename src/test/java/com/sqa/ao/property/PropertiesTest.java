@@ -57,8 +57,9 @@ public class PropertiesTest {
 		myProject.saveProperties(myProject.getFileLocation(), myProject.props);
 
 		myProject.convertPropertiesToMap(myProject.props);
-		String[] myNames = new String[5];
-		myNames = myProject.retrievePropertyNames(myProject.props);
+
+		// String[] myNames = new String[5];
+		// myNames = myProject.retrievePropertyNames(myProject.props);
 		//
 		// String myString = "This is my string. (2 * 15) = 120 / 4 . Let's find
 		// characters";
