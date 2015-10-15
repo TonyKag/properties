@@ -50,9 +50,10 @@ public class PropProject {
 	public static String getEvenCharacters(String string) {
 		String result = "";
 		char[] ch = string.toCharArray();
+		// System.out.println(Arrays.toString(ch));
 
-		for (int i = 0, j = 0; i < string.length(); i += 2, j++) {
-			ch[i] = string.charAt(j);
+		for (int i = 1; i < ch.length; i += 2) {
+			System.out.println(ch[i]);
 		}
 		result = ch.toString();
 		return result;

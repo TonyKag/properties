@@ -68,7 +68,7 @@ public class PropertiesTest {
 
 		String evenCharacters;
 		evenCharacters = myProject.getEvenCharacters(myString);
-		System.out.println(evenCharacters);
+		// System.out.println(evenCharacters);
 		//
 		// String vowelessString;
 		// vowelessString = myProject.getVowelessString(myString);
