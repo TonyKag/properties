@@ -43,19 +43,15 @@ public class PropProject {
 		System.out.println(
 				mapProperties.get("name") + "\n" + mapProperties.get("address") + "\n" + mapProperties.get("age") + "\n"
 						+ mapProperties.get("city") + "\n" + mapProperties.get("selenium") + "\n");
-
 		return null;
 	};
 
 	public static String getEvenCharacters(String string) {
 		String result = "";
 		char[] ch = string.toCharArray();
-		// System.out.println(Arrays.toString(ch));
-
 		for (int i = 1; i < ch.length; i += 2) {
-			System.out.println(ch[i]);
+			result += (ch[i]);
 		}
-		result = ch.toString();
 		return result;
 	};
 
@@ -82,8 +78,15 @@ public class PropProject {
 	}
 
 	public static String getVowelessString(String string) {
-
-		String result = " ";
+		// not A, E, I, O, U, Y
+		String result = "";
+		char[] ch = string.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			if (ch[i] != 'A' && ch[i] != 'a' && ch[i] != 'E' && ch[i] != 'e' && ch[i] != 'I' && ch[i] != 'i'
+					&& ch[i] != 'O' && ch[i] != 'o' && ch[i] != 'U' && ch[i] != 'u' && ch[i] != 'Y' && ch[i] != 'y') {
+				result += (ch[i]);
+			}
+		}
 		return result;
 	}
 
@@ -308,9 +311,7 @@ public class PropProject {
 	@Override
 	public String toString() {
 		return "PropProject [address=" + address + ", age=" + age + ", city=" + city + ", fileLocation=" + fileLocation
-				+ ", name=" + name + ", selenium=" + selenium + ", getAddress()=" + getAddress() + ", getAge()="
-				+ getAge() + ", getCity()=" + getCity() + ", getFileLocation()=" + getFileLocation() + ", getName()="
-				+ getName() + ", getSelenium()=" + getSelenium() + "]";
+				+ ", name=" + name + ", selenium=" + selenium + "]";
 	}
 
 }
