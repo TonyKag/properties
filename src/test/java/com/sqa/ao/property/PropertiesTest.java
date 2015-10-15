@@ -74,8 +74,9 @@ public class PropertiesTest {
 		vowelessString = myProject.getVowelessString(myString);
 		System.out.println(vowelessString);
 
-		// String numberCharacters;
-		// numberCharacters = myProject.getNumberCharacters(myString);
+		String numberCharacters;
+		numberCharacters = myProject.getNumberCharacters(myString);
+		System.out.println(numberCharacters);
 
 	}
 
